@@ -15,11 +15,16 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+
+        # Update the player
+        player.update(dt)
+
+        # Draw Everything
         screen.fill("black")
         player.draw(screen)
         pygame.display.flip()
 
-        # limit framerate to 60 FPS
+        # Limit framerate to 60 FPS and caculate delta time
         dt = clock.tick(60) / 1000
 
 
