@@ -24,8 +24,8 @@ def main():
 
         # Draw Everything
         screen.fill("black")
-        for entity in drawable:
-            entity.draw(screen)
+        for object in drawable:
+            object.draw(screen)
         pygame.display.flip()
 
         # Limit framerate to 60 FPS and caculate delta time
