@@ -1,3 +1,5 @@
+import sys
+
 import pygame
 
 from asteroid import Asteroid
@@ -30,10 +32,8 @@ def main():
 
         # Check for collisions
         for asteroid in asteroids:
-            if player.is_colliding_with(asteroid):
+            if asteroid.is_colliding_with(player):
                 print("Game over!")
-                import sys
-
                 sys.exit()
 
         # Draw Everything
